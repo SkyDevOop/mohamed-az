@@ -694,6 +694,7 @@ ul {
     position: relative;
     padding-top: var(--padding-section);
     padding-bottom: var(--padding-section);
+    top: 0;
 }
 
 @media (min-width: 992px) {
@@ -802,7 +803,11 @@ width: 100%;
     padding-top: var(--padding-section);
     padding-bottom: var(--padding-section);
     background-color: var(--section-color);
-    top: -270px;
+}
+@media (min-width: 992px) {
+    .services {
+        top: -270px;
+    }
 }
 @media (max-width:992px) {
     .services{
@@ -910,9 +915,12 @@ width: 100%;
     background-color: aliceblue;
     background-image: url(../Image/stats.jpg);
     background-size: cover;
-    top: -270px;
 }
-
+@media (min-width: 992px) {
+    .stats {
+        top: -270px;
+    }
+}
 .stats::before {
     content: "";
     left: 0;
@@ -999,9 +1007,12 @@ width: 100%;
     background-color: #191919;
     padding: 70px 0 0;
     position: relative;
-    top: -270px;
 }
-
+@media (min-width: 992px) {
+    .footer {
+        top: -270px;
+    }
+}
 .footer .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
