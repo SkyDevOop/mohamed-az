@@ -91,75 +91,31 @@
     <div class="landingo">
         <div class="container">
             <div class="content">
-                <h1> CONTACT</h1>
-                <p> Accueil  > CONTACT </p>
+                <h1> Présentation</h1>
+                <p>Accueil  > Présentation</p>
             </div>
         </div>
     </div>
     <!-- End Landing -->
-
-
-    <!-- Start info -->
-    <div class="boxs">
+    <!-- Start présentation -->
+    <div class="pre-sec">
         <div class="container">
-            <div class="box">
-                <a href=""><i class="fa-solid fa-clock"></i></a>
-                <div class="info">
-                    <span>Horaires</span>
-                    <span>lundi-vendredi: 09:00-18:30</span>
-                </div>
+            <div class="box-one">
+                <p><strong>AM Assurances</strong>&nbsp;est une<strong>&nbsp;société de courtage</strong>&nbsp;qui négocie avec des compagnies d’assurances toutes les possibilités pour garantir un assuré particulier ou professionnel. Notre conseil et notre expérience vous accompagneront dans<strong>&nbsp;la recherche de solutions</strong>. D’un extrême à l’autre nous sommes à vos côtés.</p>
+                <p>Courtier qui négocie avec des compagnies d’assurances toutes les possibilités pour garantir un assuré : résilié, malus, sinistres, non paiement, alcoolémie, suspension/annulation permis…</p>
+                <p>Multirisques professionnels, décennal, responsabilité civile  professionnels, flotte auto. </p>
+                <p>N’hésitez pas à effectuer votre demande de devis !</p>
             </div>
-            <div class="box">
-                <a href=""><i class="fa-solid fa-house-chimney"></i></a>
-                <div class="info">
-                    <span>Notre adresse</span>
-                    <span> 66 Rue SAINT-DENIS 91290 LA NORVILLE</span>
-                </div>
+            <div class="box-two">
+             <h5>Recherche</h5>
+            <div class="recharche">
+                <input type="search" class="" placeholder="Rechercher…">
+                <input type="submit" class="search-submit" value="Rechercher">
             </div>
-            <div class="box">
-                <a href=""><i class="fa-solid fa-calendar-days"></i></i></a>
-                <div class="info">
-                    <span>Prenez un rendez-vous</span>
-                    <span>+33 6 51 62 57 75</span>
-                </div>
             </div>
         </div>
     </div>
-    <!-- End info -->
-    <!-- Start Contact -->
-    <div class="contact-f">
-        <div class="container">
-            <div class="main-heading">
-                <h2>Contact</h2>
-                <p>
-                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Nemo, accusamus?
-                </p>
-            </div>
-            <div class="content">
-                <form class="contact-form" method="post">
-                    <input class="main-input name" placeholder="Your Name" type="text" required />
-                    <input class="main-input email" placeholder="Your Email" type="email" required />
-                    <input class="main-input phone" placeholder="Your phone" type="phone" required />
-                    <textarea class="main-input message" placeholder="Your Message" rows="4" required></textarea>
-                    <input type="submit" value="Send Message" />
-                </form>
-                <div class="info">
-                    <h4>Get In Touch</h4>
-                    <span class="phone">+33651625775</span>
-                    <span class="email">am.assurances@outlook.com</span>
-                    <h4>Where We Are</h4>
-                    <address>
-                        66 Rue SAINT-DENIS <br />
-                        91290 LA NORVILLE <br />
-                        Paris<br />
-                        France
-                    </address>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Contact -->
+    <!-- End présentation -->
     <!-- Start Footer -->
     <div class="footer">
         <div class="container">
@@ -206,36 +162,3 @@
     </div>
     <!-- End Footer -->
 </body>
-<!-- Fill smpt Js -->
-<script defer src="https://smtpjs.com/v3/smtp.js"></script>
-
-<script>
-    const form = document.querySelector(".contact-form")
-    form.addEventListener("submit", e => {
-        e.preventDefault();
-        let name = document.querySelector(".name").value;
-        let email = document.querySelector(".email").value;
-        let phone = document.querySelector(".phone").value;
-        let message = document.querySelector(".message").value;
-
-        document.querySelector(".contact-form").reset();
-        sendEmail(name, email, phone, message)
-    })
-    function sendEmail(name, email, phone, message) {
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "issambourouail9@gmail.com",
-            Password: "EC1687EC5D0165E8E05D77B646299AFDBF9C",
-            To: 'issambourouail33@gmail.com',
-            From: "issambourouail9@gmail.com",
-            Subject: `${name} Just messaged you from the website form`,
-            Body: `Name: ${name} <br> Email: ${email} <br> phone: ${phone} <br> message: ${message} <br>`
-        }).then((success) => {
-            alert("message sent successfuly. Please check the spam folder in youe mail.");
-        }).catch((error) => {
-            alert("error sending message")
-        })
-    }
-</script>
-
-</html>
