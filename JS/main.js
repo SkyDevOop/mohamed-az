@@ -10,3 +10,19 @@ const item = document.querySelector(".item");
 bar.addEventListener("click", (eo) => {
   item.classList.toggle("active-nav");
 });
+
+// return button
+let btnReturn = document.querySelector(".return");
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 400) {
+    btnReturn.classList.add("scroll-active")
+  } else {
+    btnReturn.classList.remove("scroll-active")
+  }
+});
+ btnReturn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+ })
