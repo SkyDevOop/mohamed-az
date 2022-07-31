@@ -256,7 +256,7 @@ transform: rotate(-46deg);
     }
 }
 .scroll-active {
-    top: 40vh;
+    top: 90vh;
     opacity: 1;
 }
 /* End Components */
